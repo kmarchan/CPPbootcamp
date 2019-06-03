@@ -1,8 +1,17 @@
 #include <iostream>
+#include <string>
+
+void capitalizer (std::string in) {
+    std::locale loc;
+    for(std::string::size_type i = 0; i < in.length(); i++) {
+        std::cout << std::toupper(in[i],loc);
+    }
+}
 
 int main(int argc, char **argv)
 {
-        std::string in;
-        std::cin >> in;
-        std::cout << in << "\n";
+    if (argc < 1){return 0; }
+    for(int i = 1; i < argc; i++) {
+        capitalizer(argv[i]);
+    }
 }
