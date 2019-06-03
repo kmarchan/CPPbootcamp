@@ -1,0 +1,5 @@
+*.bin
+*.ipch
+settings.json
+.vscode
+a.out
