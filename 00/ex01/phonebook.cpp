@@ -1,63 +1,6 @@
 #include <iostream>
 #include <string>
-
-class PhoneBook
-{
-    private:
-        std::string display(std::string str) {
-            int size = 0;
-            int len = 10;
-
-            std::string ret = "          ";
-            if (str.length() >= 10) {
-                for (size_t i = 0; i <= str.length() && i < 10; i++){
-                    ret[i] = str[i];
-                    size++;
-                }
-                ret[9] = '.';
-            } else {
-                len = len - str.length();
-                for (size_t i = 0; i <= str.length() && i < 10; i++){
-                    ret[len] = str[i];
-                    len++;
-                }
-            }
-            return (ret);
-        }
-
-public:
-    int            _index;
-    std::string firstName;
-    std::string lastName;
-    std::string nickName;
-    std::string login;
-    std::string postalAddress;
-    std::string email;
-    std::string phoneNumber;
-    std::string birthday;
-    std::string favoriteMeal;
-    std::string underwearColour;
-    std::string darkestSecret;
-
-public:
-    void search() {
-        std::cout << display(std::to_string(_index)) + " | " + display(firstName) + " | " + display(lastName) + " | " + display(nickName) + " |\n";
-    }
-    void getAllData() {
-        std::cout<<"firstName:      "<<firstName
-                 <<"\nlastName:       "<<lastName
-                 <<"\nnickName:       "<<nickName
-                 <<"\nlogin:          "<<login
-                 <<"\npostalAddress:  "<<postalAddress
-                 <<"\nemail:          "<<email
-                 <<"\nphoneNumber:    "<<phoneNumber
-                 <<"\nbirthday:       "<<birthday
-                 <<"\nfavoriteMeal:   "<<favoriteMeal
-                 <<"\nunderwearColour:"<<underwearColour
-                 <<"\ndarkestSecret:  "<<darkestSecret
-                 <<"\n";
-    }
-};
+#include "phonebook.header.hpp"
 
 PhoneBook addContact(int i) {
     PhoneBook newBook;
@@ -131,7 +74,7 @@ int main()
             i++;
            }
         }
-        if (in == "SEARCH") {
+        else if (in == "SEARCH") {
             std::cout << "searching.." << std::endl;
             search(phonebook, i);
             std::cout << "select index:" << std::endl;

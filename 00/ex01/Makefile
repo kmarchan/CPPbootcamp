@@ -1,7 +1,7 @@
 NAME= PhoneBook
 
 $(NAME):
-	clang++ -Wall -Werror -Wextra  phonebook.cpp -o $(NAME)
+	clang++ -Wall -Werror -Wextra -std=c++98 phonebook.cpp phonebook.func.cpp -o $(NAME)
 
 all:
 	$(NAME) 
