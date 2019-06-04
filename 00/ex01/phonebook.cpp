@@ -10,14 +10,14 @@ class PhoneBook
 
             std::string ret = "          ";
             if (str.length() >= 10) {
-                for (int i = 0; i <= str.length() && i < 10; i++){
+                for (size_t i = 0; i <= str.length() && i < 10; i++){
                     ret[i] = str[i];
                     size++;
                 }
                 ret[9] = '.';
             } else {
                 len = len - str.length();
-                for (int i = 0; i <= str.length() && i < 10; i++){
+                for (size_t i = 0; i <= str.length() && i < 10; i++){
                     ret[len] = str[i];
                     len++;
                 }
@@ -100,7 +100,7 @@ PhoneBook addContact(int i) {
 
 
 void search(PhoneBook contact[], int num) {
-    for (size_t i = 0; i < num; i++)
+    for (int i = 0; i < num; i++)
     {
         contact[i].search();
     }
@@ -135,7 +135,7 @@ int main()
             std::cout << "searching.." << std::endl;
             search(phonebook, i);
             std::cout << "select index:" << std::endl;
-             std:getline(std::cin, in);
+             std::getline(std::cin, in);
             if (is_number(in)){
                 int index;
                 index = std::stoi(in);
