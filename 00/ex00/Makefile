@@ -1,7 +1,7 @@
 NAME= megaphone
 
 $(NAME):
-	clang++ -Wall -Werror -Wextra  megaphone.cpp -o $(NAME)
+	clang++ -Wall -Werror -Wextra -std=c++98 megaphone.cpp -o $(NAME)
 
 all:
 	$(NAME) 

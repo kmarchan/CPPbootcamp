@@ -77,7 +77,7 @@ int main()
         else if (in == "SEARCH") {
             std::cout << "searching.." << std::endl;
             search(phonebook, i);
-            std::cout << "select index:" << std::endl;
+            std::cout << "select contact by index:" << std::endl;
              std::getline(std::cin, in);
             if (is_number(in)){
                 int index;
