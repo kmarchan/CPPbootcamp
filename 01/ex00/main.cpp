@@ -2,13 +2,18 @@
 #include "Pony.hpp"
 
 
-int main() {
-
-	Pony Jack("Jack", true);
+void ponyOnTheHeap() {
 	Pony *Jill = new Pony("Jill", false);
-
-	Jack.sayHello();
 	Jill->sayHello();
-
 	delete(Jill);
+};
+
+void ponyOnTheStack() {
+	Pony Jack("Jack", true);
+	Jack.sayHello();
+};
+
+int main() {
+	ponyOnTheHeap();
+	ponyOnTheStack();
 }
