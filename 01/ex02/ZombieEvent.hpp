@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Zombie.hpp"
 
 class ZombieEvent
 {
@@ -10,6 +9,6 @@ class ZombieEvent
 		~ZombieEvent();
 		void setZombieType(std::string type);
 		Zombie *newZombie(std::string name); 
-		Zombie *ZombieEvent::randomChump(void);
+		Zombie *randomChump(void);
 };
 

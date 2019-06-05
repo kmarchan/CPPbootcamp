@@ -3,10 +3,10 @@
 
 void Zombie::announce()
 {
-	std::cout	<< this->type
+	std::cout	<< this->name
 				<< " the "
 				<< this->type  
-				<< "braaaaaaaains!!!" << std::endl;
+				<< " says \"braaaaaaaains!!!\"" << std::endl;
 }
 
 Zombie::Zombie(std::string type, std::string name)
@@ -17,4 +17,5 @@ Zombie::Zombie(std::string type, std::string name)
 
 Zombie::~Zombie()
 {
+	std::cout << this->name << " decomposed!" << std::endl;
 }
