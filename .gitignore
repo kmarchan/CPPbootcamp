@@ -5,3 +5,5 @@ ex00/megaphone
 00/ex01/a.out
 .vscode/c_cpp_properties.json
 01/.vscode/settings.json
+00/.DS_Store
+.DS_Store

@@ -4,10 +4,10 @@
 
 int main() {
 
-    Pony Jack("Jack", true);
-    Pony *Jill = new Pony("Jill", false);
+	Pony Jack("Jack", true);
+	Pony *Jill = new Pony("Jill", false);
 
-    Jack.sayHello();
+	Jack.sayHello();
 	Jill->sayHello();
 
 	delete(Jill);

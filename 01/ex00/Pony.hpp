@@ -6,13 +6,13 @@
 class Pony
 {
 private:
-    std::string name;
-    bool friendly;
+	std::string name;
+	bool friendly;
 
 public:
-    Pony(std::string name, bool friendly);
-    ~Pony();
-    void sayHello();
+	Pony(std::string name, bool friendly);
+	~Pony();
+	void sayHello();
 };
 
 #endif
