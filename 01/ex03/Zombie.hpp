@@ -2,7 +2,6 @@
 
 #ifndef ZOMBIE_H
 # define ZOMBIE_H
-
 class Zombie
 {
 private:
@@ -10,8 +9,10 @@ private:
 	std::string name;
 public:
 	void announce();
-	Zombie(std::string type, std::string name);
+	void meetZombie(std::string type, std::string name);
+	Zombie();
 	~Zombie();
 };
+#endif // !ZOMBIE_H
 
-#endif
+

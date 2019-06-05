@@ -17,4 +17,4 @@ int main(void)
 	return (0);
 }
 
-//	clang++ -Wall -Werror -Wextra Zombie.cpp -std=c++98 ZombieEvent.cpp main.cpp
+//	clang++ -Wall -Werror -Wextra Zombie.cpp ZombieEvent.cpp main.cpp
