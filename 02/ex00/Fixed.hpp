@@ -12,8 +12,8 @@ public:
 	Fixed(const Fixed &thing);
 	~Fixed();
 	int getRawBits( void ) const;
+	Fixed &operator=(const Fixed &thing);
 	void setRawBits( int const raw );
 };
-
 
 #endif // !FIXED_H
