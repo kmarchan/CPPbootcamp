@@ -1,37 +1,25 @@
+
 #include <iostream>
 #include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
+#include "ClapTrap.hpp"
 
-int main(int argc, char const *argv[])
-{
-	FragTrap ft("ClapTrap");
-	ScavTrap st("Scavies");
-	
+int main(void){
+	FragTrap ft("FragTrap");
 
-	ft.takeDamage(40);
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.vaulthunter_dot_exe("Badass");
-	ft.beRepaired(10);
-	ft.rangedAttack("Skag");
-	std::cout << "\n" << std::endl;
-	st.takeDamage(40);
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.challengeNewcomer();
-	st.beRepaired(10);
-	st.rangedAttack("Skag");
+	std::cout << std::endl;
+	ScavTrap st("ScavTrap");
+
+	std::cout << std::endl;
+	NinjaTrap nt("NinjaTrap");
+
+	std::cout << std::endl;
+	nt.ninjaShoebox(st);
+	std::cout << std::endl;
+	nt.ninjaShoebox(ft);
+	std::cout << std::endl;
+	nt.ninjaShoebox(nt);
+	std::cout << std::endl;
+
 	return 0;
 }

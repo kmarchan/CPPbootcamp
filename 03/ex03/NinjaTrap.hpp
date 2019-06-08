@@ -11,6 +11,10 @@ class NinjaTrap:public ClapTrap
 private:
 
 public:
+	void ninjaShoebox(NinjaTrap);
+	void ninjaShoebox(ClapTrap);
+	void ninjaShoebox(ScavTrap);
+	void ninjaShoebox(FragTrap);
 	NinjaTrap(std::string name);
 	NinjaTrap();
 	~NinjaTrap();
