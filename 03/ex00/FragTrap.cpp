@@ -48,7 +48,7 @@ void FragTrap::vaulthunter_dot_exe(std::string const & target) {
 		std::cout << "Vault hunter has fallen asleep" << std::endl;
 	}
 	else {
-		std::cout << "Ramdom attack" << std::endl;
+		FragTrap::attack(rand() % 4, target);
 		this->energyPoints -= 25;
 	}
 }
@@ -71,4 +71,27 @@ FragTrap::FragTrap(std::string name){
 FragTrap::~FragTrap()
 {
 	std::cout << this->name << " has been deconstructed" << std::endl;
+}
+
+void FragTrap::attack(int attack, std::string target) {
+	switch (attack) {
+		case 0: {
+			std::cout << this->name << " attacks " << target << "using a grenade" << std::endl;
+		}
+		case 1: {
+			std::cout << this->name << " attacks " << target << "using a shoe" << std::endl;
+
+		}
+		case 2: {
+			std::cout << this->name << " attacks " << target << "using a gun" << std::endl;
+
+		}
+		case 3: {
+			std::cout << this->name << " attacks " << target << "using a hocky stick" << std::endl;
+
+		}
+		case 4: {
+			std::cout << this->name << " attacks " << target << "using toothpaste" << std::endl;
+		}
+	}
 }

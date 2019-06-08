@@ -15,6 +15,7 @@ private:
 	unsigned int meleeDamage;
 	unsigned int rangedDamage;
 	unsigned int armorDamageReduction;
+	void attack(int attack, std::string target);
 public:
 	void rangedAttack(std::string const &target);
 	void meleeAttack(std::string const & target);
