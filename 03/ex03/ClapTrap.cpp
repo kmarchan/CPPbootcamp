@@ -49,6 +49,14 @@ ClapTrap::ClapTrap() {}
 ClapTrap::ClapTrap(std::string name){
 	std::cout << "A wild " << name << " appears" << std::endl;
 	this->name = name;
+	this->hitPoints = 100;
+	this->maxHitPoints = 100;
+	this->energyPoints = 100;
+	this->maxEnergyPoints = 100;
+	this->level = 1;
+	this->meleeDamage = 30;
+	this->rangedDamage = 20;
+	this->armorDamageReduction = 5;
 }
 
 ClapTrap::~ClapTrap()
