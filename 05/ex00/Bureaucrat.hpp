@@ -19,6 +19,7 @@ public:
 			/* data */
 		public:
 			GradeTooHighException(/* args */);
+			GradeTooHighException();
 			~GradeTooHighException();
 	};
 	class GradeTooLowException:public std::exception
@@ -27,6 +28,7 @@ public:
 			/* data */
 		public:
 			GradeTooLowException(/* args */);
+			GradeTooLowException();
 			~GradeTooLowException();
 	};
 };
