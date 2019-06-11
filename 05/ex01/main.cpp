@@ -1,52 +1,46 @@
+#include "Form.hpp"
 #include "Bureaucrat.hpp"
-
 int main(void)
 {
-    std::cout << "__ 156 __" << std::endl;
-    try
-    {
-    /* do some stuff with bureaucrats */
-        Bureaucrat test("test", 156);    
-    }
-    catch (std::exception & e)
-    {
-        std::cout << "    " << e.what() << std::endl;
-    /* handle exception */
-    }
-    std::cout << "__ 0 __" << std::endl;
-    try
-    {
-    /* do some stuff with bureaucrats */
-        Bureaucrat test2("test2", 0);    
-    }
-    catch (std::exception & e)
-    {
-        std::cout << "    " << e.what() << std::endl;
-    /* handle exception */
-    }
 
-    std::cout << "__ increment Grade  __" << std::endl;
+    std::cout << "AUTHORIZED" << std::endl;
     try
     {
-    /* do some stuff with bureaucrats */
-        Bureaucrat test2("test2", 1);    
-        test2.incrementGrade();
+        Bureaucrat vasya("Philip", 100);
+        Form paper("Spoon", 150, 150);
+
+
+        vasya.signForm(paper);
     }
-    catch (std::exception & e)
+    catch (std::exception &e)
     {
-        std::cout << "    " << e.what() << std::endl;
-    /* handle exception */
+        std::cout << e.what() << std::endl;
     }
-        std::cout << "__ decrement Grade __" << std::endl;
+    std::cout << "UNAUTHORIZED" << std::endl;
     try
     {
-    /* do some stuff with bureaucrats */
-        Bureaucrat test2("test2", 150);    
-        test2.decrementGrade();
+        Bureaucrat    borya("Xeno", 5);
+        Form        law("Leaf", 1, 1);
+
+
+        borya.signForm(law);
     }
-    catch (std::exception & e)
+    catch (std::exception &e)
     {
-        std::cout << "    " << e.what() << std::endl;
-    /* handle exception */
+        std::cout << e.what() << std::endl;
     }
+    std::cout << "NO SIGNATURE NEEDED" << std::endl;
+    try
+    {
+        Bureaucrat borya("Sam", 100);
+        Form paper("Leaf", 150, 150);
+
+        borya.signForm(paper);
+        borya.signForm(paper);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
+    return (0);
 }

@@ -1,5 +1,6 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
+
 // Constructors
 Bureaucrat::Bureaucrat(const Bureaucrat &c) {*this = c;}
 Bureaucrat::GradeTooLowException::GradeTooLowException(Bureaucrat::GradeTooLowException &cpy){(void)cpy;}
@@ -61,4 +62,17 @@ const char*	Bureaucrat::GradeTooHighException::what() const throw() {
 
 const char*	Bureaucrat::GradeTooLowException::what() const throw() {
 	return ("Grade is more than 150");
+}
+
+void	Bureaucrat::signForm(Form &form){
+	try
+	{
+		form.beSigned(*this);
+		std::cout << "Bureaucrat " << name << " signs " << form.getName() << std::endl;
+	}
+	catch (Form::GradeTooLowException)
+	{
+		std::cout << "Bureaucrat " << name << " not authorised to sign" << form.getName() << " His grade is "
+		<< grade << " but should be at least " << form.getSigned() << ")." << std::endl;
+	}
 }

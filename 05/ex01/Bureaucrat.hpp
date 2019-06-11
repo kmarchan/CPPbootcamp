@@ -1,18 +1,21 @@
 #ifndef BUREAUCRAT_H
 # define BUREAUCRAT_H
 #include <iostream>
+#include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
 private:
 	const std::string name;
 	int grade;
 public:
-	const std::string	getName();
-	int					getGrade();
-	void				incrementGrade();
-	void				decrementGrade();
-	Bureaucrat&			operator=(const Bureaucrat &c);
+	const std::string getName();
+	int getGrade();
+	void incrementGrade();
+	void decrementGrade();
+	void signForm(Form &form);
+	Bureaucrat&	operator=(const Bureaucrat &c);
 
 	Bureaucrat(std::string name, int grade);
 	Bureaucrat(const Bureaucrat &c);
