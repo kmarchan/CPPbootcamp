@@ -33,7 +33,7 @@ int main(void)
     try
     {
         Bureaucrat borya("Sam", 100);
-        Form paper("Leaf", 150, 150);
+        Form paper(" Leaf", 150, 150);
 
         borya.signForm(paper);
         borya.signForm(paper);
