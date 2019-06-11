@@ -8,29 +8,38 @@ private:
 	const std::string name;
 	int grade;
 public:
-	std::string getName();
-	int getGrade();
-	Bureaucrat();
-	Bureaucrat();
+	const std::string	getName();
+	int					getGrade();
+	void				incrementGrade();
+	void				decrementGrade();
+	Bureaucrat&			operator=(const Bureaucrat &c);
+
+	Bureaucrat(std::string name, int grade);
+	Bureaucrat(const Bureaucrat &c);
 	~Bureaucrat();
+
 	class GradeTooHighException:public std::exception
 	{
 		private:
-			/* data */
+			std::string msg;
 		public:
-			GradeTooHighException(/* args */);
+			GradeTooHighException(Bureaucrat::GradeTooHighException &cpy);
 			GradeTooHighException();
-			~GradeTooHighException();
+			~GradeTooHighException() throw();
+			const char *what() const throw();
 	};
 	class GradeTooLowException:public std::exception
 	{
 		private:
-			/* data */
+			std::string msg;
 		public:
-			GradeTooLowException(/* args */);
+			GradeTooLowException(Bureaucrat::GradeTooLowException &cpy);
 			GradeTooLowException();
-			~GradeTooLowException();
+			~GradeTooLowException() throw();
+			const char *what() const throw();
 	};
 };
+
+std::ostream& operator<<(std::ostream& os, const Bureaucrat& bc);
 
 #endif // !BUREAUCRAT_H
