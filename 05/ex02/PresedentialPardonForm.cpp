@@ -6,7 +6,6 @@ PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm &other){*t
 PresidentialPardonForm::PresidentialPardonForm(std::string targetForm): Form(targetForm, 25, 5) {
 	this->_targetForm = targetForm;
 	std::cout << targetForm << " has been pardoned by Zafod Beeblebrox." << std::endl;
-
 }
 
 // Deconstructor
