@@ -29,6 +29,7 @@ void *serialize(void) {
 	name->n = rand() % 100;
 	std::cout << s1 << std::endl;
 	std::cout << s2 << std::endl;
+	std::cout << name->n << std::endl;
 
 	return reinterpret_cast<void*>(name);
 }
